@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          .container{
+               display: flex;
+               justify-content: center;
+          }
+
+
+          table{
+               width: 50%;
+               border: solid blue;
+          }
+     </style>
+
+     <script>
+          function kalkulator(){
+               let Inputan = document.getElementById("input").value;
+               let MataUang =document.getElementById("matauang").value;
+               let Hasil= Inputan * MataUang;
+               console.log(Hasil);
+
+               let area_hasil =document.getElementById("areahasil");
+               area_hasil.innerHTML= Hasil;
+
+          }
+     </script>
+
+</head>
+<body>
+     <div class="container">
+          <table>
+               <tr>
+
+                    <td>Masukan Nilai</td>
+                    <td>Mata Uang</td>
+                    <td>Nilai Rupiah</td>
+
+               </tr>
+
+               <tr>
+                    <td>
+                         <input type="number" onchange="kalkulator()" id="input">
+                    </td>
+                    <td>
+                         <select name="" id="matauang" onchange="kalkulator()" >
+                              <option value="9915">Dolar US</option>
+                              <option value="13472">Dolar Singapore</option>
+                              <option value="874">Ringgit malaysia</option>
+                              <option value="120">Yen Japan</option>
+                              <option value="15888">Euro</option>
+                              <option value="3592">Riyal Arab Saudi</option>
+                         </select>
+                    </td>
+                    <td>
+                         <p id="areahasil"></p>
+                    </td>
+               </tr>
+          </table>
+     </div>
+</body>
+</html>
